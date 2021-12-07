@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Spotify Songs Skip Prediction</title>
+</head>
+
+<body bgcolor='white' text='orange' background="https://i.ytimg.com/vi/aCAmRZ9Kozo/maxresdefault.jpg" background-repeat: no-repeat>
+<h1>
+<b>
+<i>
+<font size=15>
+Spotify Songs Skip Prediction
+</font>
+</i>
+</b>
+</h1>
+<div style="background-color:blue">
+<hr>
+<hr></div>
+<h2> Enter the details to check whether song is skipped or not</h2>
+<h2>
+<b text='green'>
+{{ prediction_text }}
+</b>
+</h2>
+<h4> 
+
+<form action="{{url_for('predict')}}" method="post">
+    <p> duration : <input type='text' name='duration' />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+release_year : <input type='text' name='release_year'  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+us_popularity_estimate : <input type='text' name='us_popularity_estimate'  /></p>
+
+    <p>acousticness : <input type='text' name='acousticness'  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+beat_strength : <input type='text' name='beat_strength'  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+bounciness : <input type='text' name='bounciness'  /></p>
+
+    <p> danceability : <input type='text' name='danceability'  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+dyn_range_mean : <input type='text' name='dyn_range_mean'  />
+energy : <input type='text' name='energy'  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+flatness : <input type='text' name='flatness'  /></p>
+	
+    <p> instrumentalness : <input type='text' name='instrumentalness'  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+key : <input type='text' name='key'  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+liveness : <input type='text' name='liveness'  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+loudness : <input type='text' name='loudness'  /></p>
+	
+    <p> mechanism : <input type='text' name='mechanism'  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+organism : <input type='text' name='organism'  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+speechiness : <input type='text' name='speechiness'  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+tempo : <input type='text' name='tempo'  /></p>
+
+    <p> time_signature : <input type='text' name='time_signature'  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+valence : <input type='text' name='valence'  /></p>	
+
+    <p> acoustic_vector_0 : <input type='text' name='acoustic_vector_0'  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;
+acoustic_vector_1 : <input type='text' name='acoustic_vector_1'  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;
+acoustic_vector_2 : <input type='text' name='acoustic_vector_2'  /></p>
+
+</p>acoustic_vector_3 : <input type='text' name='acoustic_vector_3'  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+acoustic_vector_4 : <input type='text' name='acoustic_vector_4'  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+acoustic_vector_5 : <input type='text' name='acoustic_vector_5'  /></p>
+	
+    <p> acoustic_vector_6 : <input type='text' name='acoustic_vector_6'  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+acoustic_vector_7 : <input type='text' name='acoustic_vector_7'  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+session_position : <input type='text' name='session_position'  /></p>
+	
+    <p> session_length : <input type='text' name='session_length'  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+context_switch : <input type='text' name='context_switch'  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+no_pause_before_play : <input type='text' name='no_pause_before_play'  /></p>
+	
+    <p> short_pause_before_play : <input type='text' name='short_pause_before_play'  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+long_pause_before_play : <input type='text' name='long_pause_before_play'  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+hist_user_behavior_n_seekfwd : <input type='text' name='hist_user_behavior_n_seekfwd'  /></p>	
+
+    <p> hist_user_behavior_n_seekback : <input type='text' name='hist_user_behavior_n_seekback'  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+hist_user_behavior_is_shuffle : <input type='text' name='hist_user_behavior_is_shuffle'  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+hour_of_day : <input type='text' name='hour_of_day'  /></p>	
+
+    <p> premium: <input type='text' name='premium'  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+mode: <input type='text' name='mode_major'  required='required'/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+context_type: <input type='text' name='context_type_catalog'  required='required'/></p>	
+
+    <p> hist_user_behavior_reason_start: <input type='text' name='hist_user_behavior_reason_start'  required='required'/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</p>		    
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+</form>
+</h4>
+</body>
+</html>
